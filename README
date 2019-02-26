@@ -2,4 +2,6 @@ The source files for User and Organization Pages sites live on the master branch
 To create a User Pages site, name the repository using the naming scheme <username>.github.io .
 A User Pages site for a personal account is available at http(s)://<username>.github.io/ .
 in this case: https://atwalder.github.io/
-Version 1.1 jumbotron framework (cool blue color scheme, listed bullet point formatting for descriptions)
+
+Version 1.0 jumbotron framework (open external links in new window tab) - 02/25/2019
+Version 1.1 jumbotron framework (cool blue color scheme, listed bullet point formatting for descriptions) - 02/26/2019

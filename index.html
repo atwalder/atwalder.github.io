@@ -32,11 +32,11 @@
 				<ul class="navbar-nav justify-content-end">
 					<li class="nav-item"><a class="nav-link" href="contact">contact</a></li>
 	      </ul>
-		<script type="text/javascript">
-		  jQuery(".navbar-nav justify-content-end").innerHTML(function() {
-		    LongMenu
-		  })
-		</script>
+	<script type="module" src="./index.js">
+					import { LongMenu } from 'index';
+					LongMenu.render();
+          jQuery(".navbar-nav justify-content-end").innerHTML('<li>' + LongMenu.render() + '</li>');
+        </script>
 	    </div>
 	  </nav>
 

@@ -7,4 +7,4 @@ Version 1.0 jumbotron framework (open external links in new window tab) - 02/25/
 Version 1.1 jumbotron framework (cool blue color scheme, listed bullet point formatting for descriptions) - 02/26/2019
 Version 1.2 jumbotron framework (add page info to index as well) - 04/16/2019
 Version 1.3 jumbotron framework (add photo to about section) - 04/17/2019
-Version 1.4 jumbotron framework (make navbar fixed and add dropdown component) - 04/29/2019
+Version 1.4 jumbotron framework (make navbar fixed and add dropdown component, also added my picture via jquery statement after the body tag) - 04/29/2019

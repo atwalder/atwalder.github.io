@@ -16,7 +16,39 @@
 			}
 			.fit-picture {
 				width: inherit;
-			}			
+			}
+			.gradient {
+				width:100px;
+				height:100px;
+				background: radial-gradient(#9198e5, #e66465);
+				margin-left:0 auto;
+				margin-top:25px;
+				position: absolute;
+			}
+			.triangle {
+				background: transparent;
+				overflow: hidden;
+				margin:0 auto;
+				width: 4.33em;
+				height:5em;
+				transform: rotate(-90deg) skewY(30deg);
+				/* position:fixed; */
+				pointer-events:none;
+				display:block;
+			}
+			.triangle:before {
+				display:block;
+				width:inherit;
+				height:inherit;
+				transform:skewY(-30deg) rotate(60deg) translate(50%);
+				background: radial-gradient(#e66465, #9198e5);
+				background-size: cover;
+				content: '';
+				position: absolute;
+			}
+			.triangle {
+				transform: translateX(-120px) rotate(-90deg) skewY(30deg);
+			}
 		</style>
     		<title>AmyBea Walder Portfolio</title>
 	</head>
@@ -47,6 +79,7 @@
 
 		<div class="jumbotron" style="background-color: #e3f2fd;">
 			<div class="container">
+				<div class='gradient triangle' id="gt0"></div>
 				<h1 class="display-5">my portfolio</h1>
 				<li>I graduated from Worcester Polytechnic Institute with a B.S. degree in computer science in May, 2018.</li>
 				<li>I have returned home to Portland, Oregon to look for challenging professional opportunities and to flesh out my education by taking some additional computer-science classes (database management in the cloud, cryptography and full stack web development) at Portland State University.</li>
@@ -78,6 +111,7 @@
 
 		<div class="jumbotron" style="background-color: #e3f2fd;">
 			<div class="container">
+				<div class='gradient triangle' id="gt1"></div>
 				<h1 class="display-5">projects & work</h1>
 				<li>I recently completed a B.S. degree in computer science at Worcester Polytechnic Institute (WPI) in Worcester, Massachusetts in May 2018.</li>
 				<br>
@@ -104,6 +138,7 @@
 
 		<div class="jumbotron" style="background-color: #e3f2fd;">
 			<div class="container">
+				<div class='gradient triangle' id="gt2"></div>
 				<h1 class="display-5">about</h1>
 				<div class="row">
 					<div class="col-md-4">
@@ -141,6 +176,7 @@
 
 		<div class="jumbotron" style="background-color: #e3f2fd;">
 			<div class="container">
+				<div class='gradient triangle' id="gt3"></div>
 				<h1 class="display-5">contact information</h1>
 				<br>
 				<li>email: amybeawalder@gmail.com</li>
@@ -166,6 +202,36 @@
 	</body>
 	<script type="text/javascript">
 		jQuery('#mePicture').append('<img class="fit-picture" src="/IMG_0327.JPG" alt="ME" />');
+			jQuery("div.gradient").eq(0).css("background", "radial-gradient(#e66465 0%, #9198e5 100%)");
+			jQuery("div.triangle").eq(0).css("background", "radial-gradient(#e66465 50%, #9198e5 50%)");
+			//jQuery("div.triangle").eq(0).css("display", "block");
+			//jQuery("div.triangle").eq(0).css("overflow", "hidden");
+			////jQuery("div.triangle").eq(0).before().css("background", "transparent");
+			//no go//jQuery("div.triangle").eq(0).before().css("background", "transparent");
+			jQuery("div.triangle").eq(0).before().css("background-size", "cover");
+			//jQuery("div.triangle:eq(0):before").css("background", "radial-gradient(#e66465 100%, #9198e5 0%)");
+			//jQuery("div.triangle").eq(0).before().css("display", "block");
+
+			//jQuery("#gt1").before().css("background", "radial-gradient(#e66465 34%, #9198e5 66%)");
+			//jQuery("#gt1::before").css("background", "radial-gradient(#e66465 50%, #9198e5 50%)");
+			//jQuery("#gt2").css("background", "radial-gradient(#e66465 66%, #9198e5 34%)");
+			//jQuery("#gt3").css("background", "radial-gradient(#e66465 100%, #9198e5 0%)");
+
+			jQuery("div.gradient").eq(1).css("background", "radial-gradient(#e66465 40%, #9198e5 60%)");
+			jQuery("div.triangle").eq(1).css("background", "radial-gradient(#e66465 40%, #9198e5 60%)");
+			jQuery("div.triangle").eq(1).before().css("background", "radial-gradient(#e66465 40%, #9198e5 60%)");
+			//jQuery("div.triangle").eq(1).before().css("background", "radial-gradient(#e66465 100%, #9198e5 0%)"); //red + orig triangle = rombus
+			//jQuery("div.triangle:before").eq(1).css("background", "radial-gradient(#e66465 100%, #9198e5 0%)"); //no red, orig triangle
+
+			jQuery("div.gradient").eq(2).css("background", "radial-gradient(#e66465 50%, #9198e5 50%)");
+			jQuery("div.triangle:before").eq(2).css("background", "radial-gradient(#e66465 30%, #9198e5 70%)");
+			jQuery("div.triangle").eq(2).css("background", "radial-gradient(#e66465 30%, #9198e5 70%)");
+
+			////jQuery("div.gradient").eq(3).css("background", "transparent");
+			////jQuery("div.triangle").eq(3).before().css("background", "radial-gradient(#9198e5 0%, #e66465 100%)");
+			jQuery("div.triangle").eq(3).before().css("background", "radial-gradient(#e66465 0%, #9198e5 100%)");
+			//jQuery("div.triangle:before").eq(3).css("background", "radial-gradient(#e66465 50%, #9198e5 50%)"); //when trans it just orig triangle //radial-gradient(#e66465 100%, #9198e5 0%)
+			////jQuery("div.triangle").eq(3).css("background", "transparent");
 	</script>
 </html>
 

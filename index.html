@@ -232,45 +232,68 @@
 
 		console.log(Math.round(tg8.top + scrollTop - clientTop));
 
-		function showTriangle(scrollPosition){
-			for (var i = 0; i < triangles.length; i++) {
-				triangles[i].display = 'none';
-				jQuery('div.triangle').hide()//css('display', 'none');
-				jQuery('div.triangle').css('position', 'absolute');
+					function showTriangle(scrollPosition){
+				for (var i = 0; i < triangles.length; i++) {
+					//triangles[i].display = 'none';
+					//triangles[i].position = 'inherit';
+					jQuery('.triangle').css('display', 'none'); //hide();
+					//jQuery('.triangle').css('position', 'absolute');
+				}
+				if (scrollPosition < 300) {//Math.round(tg2.top + scrollTop - clientTop)){
+					jQuery("#gt1").css("background", "radial-gradient(#e66465 0%, #9198e5 100%)");
+					jQuery('#gt1').css('display', 'block');
+					jQuery('#gt1').css('position', 'fixed'); //= 'gradient triangle active';
+				}
+				else if (scrollPosition < 640) {//Math.round(tg3.top + scrollTop - clientTop)) {
+					jQuery('#gt1').css("background", "radial-gradient(#e66465 10%, #9198e5 90%)");
+					jQuery('#gt1').css('display', 'block');
+					jQuery('#gt1').css('position', 'fixed');
+					//jQuery('#gt2').css('display', 'block');//show();//className = 'gradient triangle active';
+					//jQuery('#gt2').css('position', 'fixed');
+				}
+				else if (scrollPosition < 1015) {//Math.round(tg4.top + scrollTop - clientTop)) {
+					jQuery('#gt1').css("background", "radial-gradient(#e66465 18%, #9198e5 82%)");
+					jQuery('#gt1').css('display', 'block');
+					jQuery('#gt1').css('position', 'fixed');
+					//jQuery('#gt3').css('display', 'block');//show();//className = 'gradient triangle active';
+					//jQuery('#gt3').css('position', 'fixed');
+				}
+				else if (scrollPosition < 1445) {//Math.round(tg5.top + scrollTop - clientTop)) {
+					jQuery('#gt1').css("background", "radial-gradient(#e66465 25%, #9198e5 75%)");
+					jQuery('#gt1').css('display', 'block');
+					jQuery('#gt1').css('position', 'fixed');
+					//jQuery('#gt4').css('display', 'block');//show();//className = 'gradient triangle active';
+					//jQuery('#gt4').css('position', 'fixed');
+				}
+				else if (scrollPosition < 1960) {//Math.round(tg6.top + scrollTop - clientTop)) {
+					jQuery('#gt1').css("background", "radial-gradient(#e66465 30%, #9198e5 70%)");
+					jQuery('#gt1').css('display', 'block');
+					jQuery('#gt1').css('position', 'fixed');
+					//jQuery('#gt5').css('display', 'block');//show();//className = 'gradient triangle active';
+					//jQuery('#gt5').css('position', 'fixed');
+				}
+				else if (scrollPosition < 2160) {//Math.round(tg7.top + scrollTop - clientTop)) {
+					jQuery('#gt1').css("background", "radial-gradient(#e66465 35%, #9198e5 65%)");
+					jQuery('#gt1').css('display', 'block');
+					jQuery('#gt1').css('position', 'fixed');
+					//jQuery('#gt6').css('display', 'block');//show();//className = 'gradient triangle active';
+					//jQuery('#gt6').css('position', 'fixed');
+				}
+				else if (scrollPosition < 2200) {//Math.round(tg8.top + scrollTop - clientTop)) {
+					jQuery('#gt1').css("background", "radial-gradient(#e66465 40%, #9198e5 60%)");
+					jQuery('#gt1').css('display', 'block');
+					jQuery('#gt1').css('position', 'fixed');
+					//jQuery('#gt7').show();//className = 'gradient triangle active';
+					//jQuery('#gt7').css('position', 'fixed');
+				}
+				else {
+					jQuery('#gt1').css("background", "radial-gradient(#e66465 45%, #9198e5 55%)");
+					jQuery('#gt1').css('display', 'block');
+					jQuery('#gt1').css('position', 'fixed');
+					//jQuery('#gt8').show();//className = 'gradient triangle active';
+					//jQuery('#gt8').css('position', 'fixed');
+				}
 			}
-			if (scrollPosition < 300) {//Math.round(tg2.top + scrollTop - clientTop)){
-				jQuery('#gt1').show();//css('display', 'block');
-				//jQuery('#gt1').css('position', 'fixed'); //= 'gradient triangle active';
-			}
-			else if (scrollPosition < 640) {//Math.round(tg3.top + scrollTop - clientTop)) {
-				jQuery('#gt2').show();//className = 'gradient triangle active';
-				//jQuery('#gt2').css('position', 'fixed');
-			}
-			else if (scrollPosition < 1015) {//Math.round(tg4.top + scrollTop - clientTop)) {
-				jQuery('#gt3').show();//className = 'gradient triangle active';
-				//jQuery('#gt3').css('position', 'fixed');
-			}
-			else if (scrollPosition < 1445) {//Math.round(tg5.top + scrollTop - clientTop)) {
-				jQuery('#gt4').show();//className = 'gradient triangle active';
-				//jQuery('#gt4').css('position', 'fixed');
-			}
-			else if (scrollPosition < 1960) {//Math.round(tg6.top + scrollTop - clientTop)) {
-				jQuery('#gt5').show();//className = 'gradient triangle active';
-				//jQuery('#gt5').css('position', 'fixed');
-			}
-			else if (scrollPosition < 2160) {//Math.round(tg7.top + scrollTop - clientTop)) {
-				jQuery('#gt6').show();//className = 'gradient triangle active';
-				//jQuery('#gt6').css('position', 'fixed');
-			}
-			else if (scrollPosition < 2200) {//Math.round(tg8.top + scrollTop - clientTop)) {
-				jQuery('#gt7').show();//className = 'gradient triangle active';
-				//jQuery('#gt7').css('position', 'fixed');
-			}
-			else {
-				jQuery('#gt8').show();//className = 'gradient triangle active';
-				//jQuery('#gt8').css('position', 'fixed');
-			}
-		}
 
 		jQuery(window).scroll(function() {
 			lastScrollPosition = window.pageYOffset; //scrollY;//e.pageY;

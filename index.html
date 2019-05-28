@@ -14,9 +14,6 @@
 			.navbar {
 				margin-bottom:30px;
 			}
-			.fit-picture {
-				width: inherit;
-			}
 			.gradient {
 				width:100px;
 				height:100px;
@@ -32,12 +29,12 @@
 				width: 4.33em;
 				height:5em;
 				transform: rotate(-90deg) skewY(30deg);
-				/* position:fixed; */
 				pointer-events:none;
-				display:block;
+				display:none;
+				/* position:absolute; */
 			}
-			/* .triangle:before {
-				display:block;
+			.triangle:before {
+				display:none;/* display:block; */
 				width:inherit;
 				height:inherit;
 				transform:skewY(-30deg) rotate(60deg) translate(50%);
@@ -47,10 +44,14 @@
 				position: absolute;
 			}
 			.triangle {
-				transform: translateX(-120px) rotate(-90deg) skewY(30deg);
-			} */
+				transform: translateX(-95px) rotate(-90deg) skewY(30deg);
+			}
+			.active {
+				position:fixed;
+				display:block;
+			}
 		</style>
-    		<title>AmyBea Walder Portfolio</title>
+  	<title>AmyBea Walder Portfolio</title>
 	</head>
 	<body>
 		<!-- you might ask yourself in this regard why there is a gap between the navbar and the jumbotron. this is because the navbar is set to static and not to fixed. -->
@@ -73,13 +74,13 @@
 					    <a class="dropdown-item" href="contact">Contact</a>
 					  </div>
 					</li>
-	      </ul>
+				</ul>
 	    </div>
 	  </nav>
 
 		<div class="jumbotron" style="background-color: #e3f2fd;">
 			<div class="container">
-				<div class='gradient triangle' id="gt0"></div>
+				<div class='gradient triangle' id="gt1"></div>
 				<h1 class="display-5">my portfolio</h1>
 				<li>I graduated from Worcester Polytechnic Institute with a B.S. degree in computer science in May, 2018.</li>
 				<li>I have returned home to Portland, Oregon to look for challenging professional opportunities and to flesh out my education by taking some additional computer-science classes (database management in the cloud, cryptography and full stack web development) at Portland State University.</li>
@@ -89,6 +90,7 @@
 			</div>
 		</div>
 		<div class="container">
+			<div class='gradient triangle' id="gt2"></div>
 			<div class="row">
 				<div class="col-md-4">
 					<h2>The IMAGS App</h2>
@@ -111,7 +113,7 @@
 
 		<div class="jumbotron" style="background-color: #e3f2fd;">
 			<div class="container">
-				<div class='gradient triangle' id="gt1"></div>
+				<div class='gradient triangle' id="gt3"></div>
 				<h1 class="display-5">projects & work</h1>
 				<li>I recently completed a B.S. degree in computer science at Worcester Polytechnic Institute (WPI) in Worcester, Massachusetts in May 2018.</li>
 				<br>
@@ -121,6 +123,7 @@
 			</div>
 		</div>
 		<div class="container">
+			<div class='gradient triangle' id="gt4"></div>
 			<div class="row">
 				<div class="col-md-4">
 					<h2>Major Qualifying Project</h2>
@@ -138,7 +141,7 @@
 
 		<div class="jumbotron" style="background-color: #e3f2fd;">
 			<div class="container">
-				<div class='gradient triangle' id="gt2"></div>
+				<div class='gradient triangle' id="gt5"></div>
 				<h1 class="display-5">about</h1>
 				<div class="row">
 					<div class="col-md-4">
@@ -147,18 +150,19 @@
 						<li>I am motivated by working as part of a team of people with complimentary skills and perspectives.</li>
 						<li>My primary interests in computer science include artificial intelligence (in particular machine learning), big data as well as data management, software engineering, and human computer interaction.</li>
 					</div>
-					<div class="col-md-4" id="mePicture">
-						<!-- <img class="fit-picture" src="/IMG_0327.JPG" alt="ME" /> -->
+					<div class="col-md-4">
+						<img class="fit-picture" src="/IMG_0327.JPG" alt="ME" />
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="container">
+			<div class='gradient triangle' id="gt6"></div>
 			<div class="row">
 				<div class="col-md-4">
 					<h2>Resume</h2>
 					<p>I have uploaded my current resume. Please click the button for the URL to access the resume file.</p>
-					<p><a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="/AmyBea Walder Resume.pdf" role="button">more details &raquo;</a></p>
+					<p><a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/19iVsT0zuuhL0isBwsvZ5kBaanqMToBlx/view?usp=sharing" role="button">more details &raquo;</a></p>
 				</div>
 				<div class="col-md-4">
 					<h2>Curriculum Vitae</h2>
@@ -176,7 +180,7 @@
 
 		<div class="jumbotron" style="background-color: #e3f2fd;">
 			<div class="container">
-				<div class='gradient triangle' id="gt3"></div>
+				<div class='gradient triangle' id="gt7"></div>
 				<h1 class="display-5">contact information</h1>
 				<br>
 				<li>email: amybeawalder@gmail.com</li>
@@ -184,6 +188,7 @@
 			</div>
 		</div>
 		<div class="container">
+			<div class='gradient triangle' id="gt8"></div>
 			<div class="row">
 				<div class="col-md-4">
 					<h2>LinkedIn</h2>
@@ -199,6 +204,7 @@
 			<hr>
 			<p>my portfolio v1.4 jumbotron framework</p>
 		</div>
+
 	</body>
 	<script type="text/javascript">
 		jQuery('#mePicture').append('<img class="fit-picture" src="/IMG_0327.JPG" alt="ME" />');			
